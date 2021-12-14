@@ -23,7 +23,7 @@ class EmployeeRepository extends BaseRepository
             'gender' => 'required',
             'code' => 'required|min:6',
             'phone' => 'required|min:8',
-            'email' => 'required|unique',
+            'email' => 'required',
             'address' => 'required'
         ]);
         $data = $request->all();

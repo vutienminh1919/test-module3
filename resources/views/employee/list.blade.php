@@ -7,8 +7,6 @@
                 <button class="btn btn-primary btn-block" type="submit">Search</button>
             </form>
         </div>
-
-
         <table class="table table-bordered">
             <thead class="thead-dark">
             <tr>
@@ -37,8 +35,10 @@
                     <td>{{$employee->code}}</td>
                     <td>{{$employee->email}}</td>
                     <td>{{$employee->address}}</td>
-                    <td><a type="button" class="btn btn-success" href="{{route('employees.edit',$employee->id)}}">Edit</a></td>
-                    <td><a type="button" class="btn btn-danger" href="{{route('employees.destroy',$employee->id)}}">Delete</a></td>
+                    <td><a type="button" class="btn btn-success"
+                           href="{{route('employees.edit',$employee->id)}}">Edit</a></td>
+                    <td><a type="button" class="btn btn-danger" onclick="return confirm('Are you sure ?')"
+                           href="{{route('employees.destroy',$employee->id)}}">Delete</a></td>
 
                 </tr>
             @endforeach
